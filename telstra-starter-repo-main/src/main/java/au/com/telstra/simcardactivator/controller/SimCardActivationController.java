@@ -1,13 +1,11 @@
 package au.com.telstra.simcardactivator.controller;
 
 
+import au.com.telstra.simcardactivator.Entity.SimCardActivationRecord;
 import au.com.telstra.simcardactivator.Service.SimCardActivationService;
 import au.com.telstra.simcardactivator.model.SimCardActivationRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class SimCardActivationController {
@@ -19,5 +17,10 @@ public class SimCardActivationController {
     public String activateSim(@RequestBody SimCardActivationRequest simCardActivationRequest){
 
         return simCardActivationService.activateSim(simCardActivationRequest);
+    }
+
+    @GetMapping("/getSimStatus")
+    public SimCardActivationRecord getSimStatus(@RequestParam("id") long id){
+    return simCardActivationService.getSimStatus(id).getBody();
     }
 }
