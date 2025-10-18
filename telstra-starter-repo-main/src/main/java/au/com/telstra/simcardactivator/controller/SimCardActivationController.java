@@ -21,6 +21,6 @@ public class SimCardActivationController {
 
     @GetMapping("/getSimStatus")
     public SimCardActivationRecord getSimStatus(@RequestParam("id") long id){
-    return simCardActivationService.getSimStatus(id).getBody();
+        return simCardActivationService.getSimStatus(id).getBody();
     }
 }

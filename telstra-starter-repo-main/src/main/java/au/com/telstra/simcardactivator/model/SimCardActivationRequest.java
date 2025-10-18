@@ -7,6 +7,15 @@ public class SimCardActivationRequest {
 
     public SimCardActivationRequest() {
     }
+
+    public SimCardActivationRequest(String iccid, String email) {
+        this.iccid = iccid;
+        this.customerEmail = email;
+    }
+
+    public SimCardActivationRequest(String iccid) {
+    }
+
     public String getIccid() {
         return iccid;
     }
@@ -30,4 +39,6 @@ public class SimCardActivationRequest {
                 ", customerEmail='" + customerEmail + '\'' +
                 '}';
     }
+
+
 }

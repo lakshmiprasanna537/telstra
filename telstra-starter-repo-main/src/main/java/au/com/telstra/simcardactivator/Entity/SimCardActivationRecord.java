@@ -10,7 +10,7 @@ public class SimCardActivationRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String iccid;
     private String customerEmail;
     private boolean active;
@@ -30,11 +30,11 @@ public class SimCardActivationRecord {
         this.customerEmail = customerEmail;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
