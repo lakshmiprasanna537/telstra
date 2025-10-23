@@ -1,0 +1,10 @@
+# Unique project key
+sonar.projectKey=telstra_starter_repo
+# Project name
+sonar.projectName=Telstra Starter Repo
+# Project version
+sonar.projectVersion=1.0
+# Path to source code
+sonar.sources=src/main/java
+# Encoding
+sonar.sourceEncoding=UTF-8
